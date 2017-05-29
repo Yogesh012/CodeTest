@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		427D34501ED6C68D00CD38A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D344F1ED6C68D00CD38A6 /* AppDelegate.swift */; };
-		427D34521ED6C68D00CD38A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D34511ED6C68D00CD38A6 /* ViewController.swift */; };
 		427D34551ED6C68D00CD38A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D34531ED6C68D00CD38A6 /* Main.storyboard */; };
 		427D34571ED6C68D00CD38A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427D34561ED6C68D00CD38A6 /* Assets.xcassets */; };
 		427D345A1ED6C68D00CD38A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D34581ED6C68D00CD38A6 /* LaunchScreen.storyboard */; };
 		427D34651ED6C68D00CD38A6 /* codeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D34641ED6C68D00CD38A6 /* codeTestTests.swift */; };
 		427D34701ED6C68D00CD38A6 /* codeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D346F1ED6C68D00CD38A6 /* codeTestUITests.swift */; };
+		427D34831ED70AD400CD38A6 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D34821ED70AD400CD38A6 /* GraphViewController.swift */; };
+		427D34881ED8A4A400CD38A6 /* PerformanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D34871ED8A4A400CD38A6 /* PerformanceTableViewController.swift */; };
+		427D348C1EDAA21E00CD38A6 /* CollapsableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D348B1EDAA21E00CD38A6 /* CollapsableTableViewCell.swift */; };
+		427D348E1EDAA69100CD38A6 /* InnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D348D1EDAA69100CD38A6 /* InnerTableViewCell.swift */; };
+		427D34901EDAFE0600CD38A6 /* CollapsableTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D348F1EDAFE0600CD38A6 /* CollapsableTableViewHeader.swift */; };
+		427D34921EDB6AEA00CD38A6 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 427D34911EDB6AEA00CD38A6 /* list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		427D344C1ED6C68D00CD38A6 /* codeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427D344F1ED6C68D00CD38A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		427D34511ED6C68D00CD38A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		427D34541ED6C68D00CD38A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		427D34561ED6C68D00CD38A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		427D34591ED6C68D00CD38A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		427D346B1ED6C68D00CD38A6 /* codeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		427D346F1ED6C68D00CD38A6 /* codeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeTestUITests.swift; sourceTree = "<group>"; };
 		427D34711ED6C68D00CD38A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427D34821ED70AD400CD38A6 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		427D34871ED8A4A400CD38A6 /* PerformanceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTableViewController.swift; sourceTree = "<group>"; };
+		427D348B1EDAA21E00CD38A6 /* CollapsableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollapsableTableViewCell.swift; path = ../CollapsableTableViewCell.swift; sourceTree = "<group>"; };
+		427D348D1EDAA69100CD38A6 /* InnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerTableViewCell.swift; sourceTree = "<group>"; };
+		427D348F1EDAFE0600CD38A6 /* CollapsableTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsableTableViewHeader.swift; sourceTree = "<group>"; };
+		427D34911EDB6AEA00CD38A6 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				427D344E1ED6C68D00CD38A6 /* codeTest */,
+				427D34931EDB6B4100CD38A6 /* Resources */,
 				427D34631ED6C68D00CD38A6 /* codeTestTests */,
 				427D346E1ED6C68D00CD38A6 /* codeTestUITests */,
 				427D344D1ED6C68D00CD38A6 /* Products */,
@@ -98,7 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				427D344F1ED6C68D00CD38A6 /* AppDelegate.swift */,
-				427D34511ED6C68D00CD38A6 /* ViewController.swift */,
+				427D34871ED8A4A400CD38A6 /* PerformanceTableViewController.swift */,
+				427D34821ED70AD400CD38A6 /* GraphViewController.swift */,
+				427D348B1EDAA21E00CD38A6 /* CollapsableTableViewCell.swift */,
+				427D348D1EDAA69100CD38A6 /* InnerTableViewCell.swift */,
+				427D348F1EDAFE0600CD38A6 /* CollapsableTableViewHeader.swift */,
 				427D34531ED6C68D00CD38A6 /* Main.storyboard */,
 				427D34561ED6C68D00CD38A6 /* Assets.xcassets */,
 				427D34581ED6C68D00CD38A6 /* LaunchScreen.storyboard */,
@@ -123,6 +138,15 @@
 				427D34711ED6C68D00CD38A6 /* Info.plist */,
 			);
 			path = codeTestUITests;
+			sourceTree = "<group>";
+		};
+		427D34931EDB6B4100CD38A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				427D34911EDB6AEA00CD38A6 /* list.json */,
+			);
+			name = Resources;
+			path = codeTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				427D345A1ED6C68D00CD38A6 /* LaunchScreen.storyboard in Resources */,
+				427D34921EDB6AEA00CD38A6 /* list.json in Resources */,
 				427D34571ED6C68D00CD38A6 /* Assets.xcassets in Resources */,
 				427D34551ED6C68D00CD38A6 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427D34521ED6C68D00CD38A6 /* ViewController.swift in Sources */,
+				427D34901EDAFE0600CD38A6 /* CollapsableTableViewHeader.swift in Sources */,
+				427D34881ED8A4A400CD38A6 /* PerformanceTableViewController.swift in Sources */,
+				427D34831ED70AD400CD38A6 /* GraphViewController.swift in Sources */,
+				427D348C1EDAA21E00CD38A6 /* CollapsableTableViewCell.swift in Sources */,
 				427D34501ED6C68D00CD38A6 /* AppDelegate.swift in Sources */,
+				427D348E1EDAA69100CD38A6 /* InnerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = codeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Techniceh.codeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Altiore.codeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = codeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Techniceh.codeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Altiore.codeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
