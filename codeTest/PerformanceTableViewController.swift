@@ -197,6 +197,7 @@ class PerformanceTableViewController: UITableViewController {
         headerView.tag = section
         
         mainView.addSubview(headerView)
+        
         return mainView
     }
     
