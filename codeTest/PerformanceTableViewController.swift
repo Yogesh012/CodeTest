@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class PerformanceTableViewController: UITableViewController {
     
      struct RowData {
@@ -76,7 +77,7 @@ class PerformanceTableViewController: UITableViewController {
                     }
                     else {
                         v = numberFormatter.string(from: v as! NSNumber)!
-                        data = RowData(name: k, value: "\(v)%")
+                        data = RowData(name: k, value: "\(v)")
                     }
                     
                     rows.append(data)
@@ -85,7 +86,7 @@ class PerformanceTableViewController: UITableViewController {
             
             var v = ((value["_figure"]!) as! NSArray)[0]
             v  = numberFormatter.string(from: v as! NSNumber)!
-            let section = Section(name: key as! String, value: "\(v)%", rows: rows)
+            let section = Section(name: key as! String, value: "\(v)", rows: rows)
             sections.append(section)
         }
        // print(sections)
@@ -173,11 +174,22 @@ class PerformanceTableViewController: UITableViewController {
         //label 2
         label = UILabel(frame: labelFrame)
         label.translatesAutoresizingMaskIntoConstraints = false
-        print(sections[section].value!)
-        label.text = sections[section].value
+       // print(sections[section].value!)
+        label.text = "\(sections[section].value!)%"
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont(name: "System", size: 15.0)
-        label.textColor = UIColor(netHex: 0x008000)
+        if sections[section].value! == "null" {
+            label.textColor = UIColor(netHex: 0x008000)
+        }
+        else if Double(sections[section].value)! <= 10.00 {
+            label.textColor = UIColor.red
+        }
+        else if Double(sections[section].value!)! > 10.00 && Double(sections[section].value!)! <= 13.00 {
+            label.textColor = UIColor.orange
+        }
+        else {
+            label.textColor = UIColor(netHex: 0x008000)
+        }
         
         headerView.addSubview(label)
         
@@ -219,7 +231,21 @@ class PerformanceTableViewController: UITableViewController {
 //        cell.tableData = sections[indexPath.section].rows
 //        cell.tableView.reloadData()
         cell.leftLabel.text = sections[indexPath.section].rows[indexPath.row].name
-        cell.rightLabel.text = sections[indexPath.section].rows[indexPath.row].value
+        cell.rightLabel.text = "\(sections[indexPath.section].rows[indexPath.row].value!)%"
+        
+        if sections[indexPath.section].rows[indexPath.row].value == "null" {
+            cell.rightLabel.textColor = UIColor.red
+            cell.rightLabel.text = "\(sections[indexPath.section].rows[indexPath.row].value!)"
+        }
+        else if Double(sections[indexPath.section].rows[indexPath.row].value)! <= 10.00 {
+            cell.rightLabel.textColor = UIColor.red
+        }
+        else if Double(sections[indexPath.section].rows[indexPath.row].value)! > 10.00 && Double(sections[indexPath.section].rows[indexPath.row].value!)! <= 13.00 {
+            cell.rightLabel.textColor = UIColor.orange
+        }
+        else {
+            cell.rightLabel.textColor = UIColor(netHex: 0x008000)
+        }
         
         return cell
     }

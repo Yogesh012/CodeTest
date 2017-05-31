@@ -22,7 +22,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="J3e-Bb-p5Q" kind="relationship" relationship="viewControllers" id="YJY-kC-4ab"/>
-                        <segue destination="Yaj-Cq-dVI" kind="relationship" relationship="viewControllers" id="BOW-nu-PoA"/>
+                        <segue destination="M9m-BT-HzU" kind="relationship" relationship="viewControllers" id="BOW-nu-PoA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGD-K0-2lq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,14 +33,14 @@
         <scene sceneID="JaS-qk-WNm">
             <objects>
                 <tableViewController id="Q9G-lN-2mW" customClass="PerformanceTableViewController" customModule="codeTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="1" id="S5j-hl-TXK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="100" sectionHeaderHeight="10" sectionFooterHeight="1" id="S5j-hl-TXK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" focusStyle="custom" rowHeight="60" id="mgM-8i-1mb" customClass="CollapsableTableViewHeader" customModule="codeTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mgM-8i-1mb" id="KEz-lM-kU2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -108,7 +108,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="300" id="UXN-Sx-6uf" customClass="CollapsableTableViewCell" customModule="codeTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="115.5" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UXN-Sx-6uf" id="HRY-nw-0ba">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1720.8" y="-596.85157421289364"/>
         </scene>
-        <!--Graph-->
+        <!--Projected Return-->
         <scene sceneID="kAd-28-xVv">
             <objects>
-                <viewController id="Yaj-Cq-dVI" customClass="GraphViewController" customModule="codeTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Projected Return" id="Yaj-Cq-dVI" customClass="GraphViewController" customModule="codeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CY5-g2-VSK"/>
                         <viewControllerLayoutGuide type="bottom" id="QS9-pU-NtV"/>
@@ -183,13 +183,63 @@
                     <view key="view" contentMode="scaleToFill" id="jIQ-5g-ilI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-dt-UcW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wl-Kw-m8I" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="16" y="64" width="343" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="zrk-Bx-22U"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="2Sc-cs-dmk">
+                                <rect key="frame" x="16" y="384" width="50" height="14.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" fixedFrame="YES" text="Projected Returns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-xv-rkc">
+                                <rect key="frame" x="162" y="326" width="120" height="14.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" fixedFrame="YES" text="Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="pSY-Ke-Mjv">
+                                <rect key="frame" x="162" y="326" width="100" height="14.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XMG-dt-UcW" firstAttribute="leading" secondItem="jIQ-5g-ilI" secondAttribute="leading" id="0Oi-u7-SzB"/>
+                            <constraint firstItem="XMG-dt-UcW" firstAttribute="top" secondItem="jIQ-5g-ilI" secondAttribute="top" id="9Ri-eZ-K4k"/>
+                            <constraint firstAttribute="bottom" secondItem="XMG-dt-UcW" secondAttribute="bottom" id="I4l-C5-0GC"/>
+                            <constraint firstAttribute="trailing" secondItem="XMG-dt-UcW" secondAttribute="trailing" id="PF5-GK-aF5"/>
+                            <constraint firstItem="1Wl-Kw-m8I" firstAttribute="top" secondItem="CY5-g2-VSK" secondAttribute="bottom" id="nmm-2g-9XR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Wl-Kw-m8I" secondAttribute="trailing" id="rHJ-uU-e4n"/>
+                            <constraint firstItem="1Wl-Kw-m8I" firstAttribute="leading" secondItem="jIQ-5g-ilI" secondAttribute="leadingMargin" id="rXC-jd-sgn"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graph" image="homeTab" id="14M-un-vm4"/>
+                    <navigationItem key="navigationItem" title="Projected Returns" id="d8Z-bw-F73"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="XMG-dt-UcW" id="uGg-l3-hFx"/>
+                        <outlet property="graph" destination="1Wl-Kw-m8I" id="Myv-rZ-wDF"/>
+                        <outlet property="percentage" destination="pSY-Ke-Mjv" id="FcQ-5N-cNO"/>
+                        <outlet property="returns" destination="dpq-xv-rkc" id="HHf-qc-qLa"/>
+                        <outlet property="tooltip" destination="2Sc-cs-dmk" id="fbJ-hT-kqP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rr-hf-dG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="99"/>
+            <point key="canvasLocation" x="1720.8" y="98.50074962518741"/>
         </scene>
         <!--Home-->
         <scene sceneID="PIP-I9-VD0">
@@ -212,6 +262,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xod-nn-cQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="-596.85157421289364"/>
+        </scene>
+        <!--Graph-->
+        <scene sceneID="DRA-BK-Fqb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M9m-BT-HzU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Graph" image="homeTab" id="14M-un-vm4"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="v7C-6s-bEX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yaj-Cq-dVI" kind="relationship" relationship="rootViewController" id="cCe-ft-p8Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyC-FT-x2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.60000000000002" y="98.50074962518741"/>
         </scene>
     </scenes>
     <resources>
